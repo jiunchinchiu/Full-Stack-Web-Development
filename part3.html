@@ -1,0 +1,102 @@
+<!--Project Name : Dating Web site with visual style and interaction
+----Developer    : CHIU JIUN CHIN
+----Latest Update: 2016/06/09
+--->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    /*Formats of fieldset*/
+    fieldset{
+	  background:lightyellow;
+	  border:10px solid yellow;
+	  margin-bottom:10px;
+	  width:720px;
+	}
+	.label1{
+	  width:180px;/*The width of each label is 180px*/
+	  display:inline-block;/*The label text needs to have display:inline-block*/
+	  /*The label text needs to be right-align and top-align*/
+	  text-align:right;
+	  vertical-align:text-top;
+	}
+	/*The labels of the checkbox and the radio needs to have width:auto*/
+	label.ckbox-radio{	
+	  width:auto;
+    }
+	/*For the words on both sides of the two range*/
+	.rangefm{
+	  border-style:hidden;
+	  text-align:end;
+    }
+	/*The textarea(address) needs to be width:360px and height:50px*/
+	.t-area{
+	  width:360px;
+	  height:50px;
+	}
+	/* The label and input elements become significantly larger when the mouse is moved over them*/
+	label:hover { font-size:40px }
+	input:hover { font-size:20px }
+  </style>
+  <title>Please Enter Your Details For Our Dating Website!</title>
+</head>
+
+<body>
+  <h1>Please Enter Your Details For Our Dating Website!</h1>
+  <form action="demo.php" method="post">
+    <fieldset>
+      <legend>Your Face</legend>
+      <label for="yourimage" class="label1">Your image:</label>
+      <input type="file" value="Choose file" name="imgfile" required><br>
+      <label for="imagepreview" class="label1">Image preview:</label>
+      <img id="preview" width="100px" height="100px"><br>
+    </fieldset><br>
+    <fieldset>
+      <legend>Your General Details</legend>
+      <label for="name" class="label1">Name:</label>
+      <input type="text" name="name" required><br>
+      <label for="gender" class="label1">Gender:</label>
+      <input type="radio" name="gender" value="Male" class="ckbox-radio" required>Male
+      <input type="radio" name="gender" value="Female" class="ckbox-radio" required>Female<br>
+      <label for="age" class="label1">Age:</label>
+      <input type="number" name="age" required><br>
+      <label for="dateofbirth" class="label1">Date of birth:</label>
+      <input type="date" name="birthdate"><br>
+      <label for="color" class="label1">Favorite color:</label>
+      <input type="color" name="favorcolor"><br>
+      <label for="country" class="label1">Which country:</label>
+      <select>
+        <option value="china">China</option>
+        <option value="japan">Japan</option>
+        <option value="southkorea">South Korea</option>
+        <option value="philippines">Philippines</option>
+        <option value="malaysia">Malaysia</option>
+        <option value="others">Others</option>
+      </select><br>
+    </fieldset><br>
+    <fieldset>
+      <legend>Your Indicators</legend>
+      <label for="height" class="label1">Height:</label>
+      <label class="rangefm">Short</label><input type="range" name="height" min="140" max="200"><label class="rangefm">Tall</label><br>
+      <label for="salary" class="label1">Salary:</label>
+      <label class="rangefm">Poor</label><input type="range" name="salary" min="0" max="100"><label class="rangefm">Rich</label><br>
+    </fieldset><br>
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="email" class="label1">Email:</label>
+      <input type="email" name="email" required><br>
+      <label for="mobile" class="label1">Mobile:</label>
+      <input type="tel" name="mobile"><br>
+      <label for="address" class="label1">Address:</label>
+      <input type="textarea" class="t-area" name="address"><br>
+      <label for="contact" class="label1">Method to contact you:</label>
+      <input type="checkbox" name="cemail" ><label class="ckbox-radio">Email</label>
+      <input type="checkbox" name="cWhatsapp" ><label class="ckbox-radio">Whatsapp</label>
+      <input type="checkbox" name="cinappchat" ><label class="ckbox-radio">In-app chat</label><br>
+    </fieldset><br>
+    <input type="submit" value="send">
+  </form>
+  <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
